@@ -1,9 +1,9 @@
 {
   "$schema": "https://json.schemastore.org/web-manifest-combined.json",
-  "name": "qwik-project-name",
-  "short_name": "Welcome to Qwik",
+  "name": "Rick and morty Fan Page",
+  "short_name": "Rick and Morty Fan Zone",
   "start_url": ".",
   "display": "standalone",
   "background_color": "#fff",
-  "description": "A Qwik project app."
+  "description": "Welcome to Rick and Morty Central, the go-to destination for devoted fans of the hit animated series. Dive into an interdimensional universe filled with mind-bending adventures, hilarious moments, and intriguing theories. Explore episode guides, character profiles, fan art, and the latest news from the multiverse."
 }
