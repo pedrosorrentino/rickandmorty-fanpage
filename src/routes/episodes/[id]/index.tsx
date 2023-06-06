@@ -5,7 +5,8 @@ import { CardEpisodeDetail, Loading, ToastCard } from "~/components"
 import type { DocumentHead } from "@builder.io/qwik-city"
 
 export const useEpisodeDetails = routeLoader$(async (requestEvent) => {
-  const episodeId = requestEvent.url.searchParams.get("id")
+  const episodeId =
+    requestEvent.url.searchParams.get("id") || requestEvent.params.id
   const res = await fetchOneEpisode(`${episodeId}` || "")
   return res
 })
