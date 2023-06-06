@@ -1,29 +1,47 @@
-/**
- * WHAT IS THIS FILE?
- *
- * Globally applied styles. No matter which components are in the page or matching route,
- * the styles in here will be applied to the Document, without any sort of CSS scoping.
- *
- */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
-/**
- * WHAT IS THIS FILE?
- *
- * Globally applied styles. No matter which components are in the page or matching route,
- * the styles in here will be applied to the Document, without any sort of CSS scoping.
- *
- */
 html {
   -webkit-text-size-adjust: 100%;
   -moz-tab-size: 4;
   -o-tab-size: 4;
   tab-size: 4;
-  font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
-    'Helvetica Neue', Arial, 'Noto Sans', sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji',
-    'Segoe UI Symbol', 'Noto Color Emoji';
+  font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont,
+    "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif,
+    "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
 }
 
 body {
   padding: 0;
   line-height: inherit;
+}
+
+.card-character-fx {
+  @apply tracking-widest text-slate-800 bg-white p-3 rounded-lg transition duration-300 shadow-xl;
+
+  &:hover {
+    @apply transform transition duration-300 hover:-translate-y-2 text-green-500;
+  }
+}
+
+.link-episode {
+  @apply text-black font-semibold  bg-green-500 p-2 rounded-lg transition-colors duration-300;
+
+  &:hover {
+    @apply text-black bg-green-300 transform transition-transform duration-300 hover:translate-x-1;
+  }
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.fade-in {
+  animation: fade-in 1s ease-out;
 }
